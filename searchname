@@ -1,0 +1,19 @@
+/*jshint multistr:true */
+
+text = "Blah blah blah blah blah blah Name \
+blah blah blah Name blah blah Name blah blah \
+blah blah blah blah blah Name";
+
+var myName = "Name";
+var hits = [];
+
+// Look for "N" in the text
+for(var i = 0; i < text.length; i++) {
+	if (text[i] === "N") {
+		// If we find it, add characters up to
+		// the length of my name to the array
+		for(var j = i; j < (myName.length + i); j++) {
+			hits.push(text[j]);
+		}
+	}
+}
