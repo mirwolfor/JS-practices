@@ -1,11 +1,26 @@
-var userChoice = prompt("Do you choose rock, paper or scissors?");
+confirm("Welcome to the worst version of Rock, Paper, Scissors. If you don't win you're a pussy. Press OK to continue!")
+
+
+var userChoice = prompt("Do you choose rock, paper or scissors?")
+    if (userChoice === "rock") {
+    userChoice = "rock";
+}
+else if (userChoice === "paper") {
+    userChoice = "paper";
+}
+else if (userChoice === "scissors") {
+    userChoice = "scissors";
+}
+else {
+      userChoice = prompt("Whoops! It appears you have made an invalid selection. Please choose rock, paper, or scissors");
+}
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
-	computerChoice = "rock";
-} else if(computerChoice <= 0.67) {
-	computerChoice = "paper";
+    computerChoice = "rock";
+} else if(0.34 > computerChoice <= 0.67) {
+    computerChoice = "paper";
 } else {
-	computerChoice = "scissors";
+    computerChoice = "scissors";
 } console.log("Computer: " + computerChoice);
 
 var compare = function(choice1, choice2){
@@ -40,4 +55,7 @@ else if(choice1 === "scissors"){
 }
 }
 console.log(compare(userChoice, computerChoice));
+
+
+
 
